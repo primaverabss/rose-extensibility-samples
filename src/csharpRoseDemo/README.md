@@ -17,6 +17,8 @@ To run this application you need:
 * Provide your application *Client Id* and *Secret*. Register your app on the App Dashboard.
 * Provide your *AccountKey* and *SubscriptionKey*. You can get this from ROSE application URL.
 
+Change the *constants.cs* contend with you information.
+
 ```csharp
 namespace RoseSample.Constants
 {
