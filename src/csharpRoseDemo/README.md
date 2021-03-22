@@ -1,9 +1,9 @@
 # ROSE csharp console application
 
-This demo application includes several features that allow you to understand how to make API calls to the logistics and financial areas, like sales, purchases and accounting such as:
+This demo application includes several features that allow you to understand how to make API calls to the logistics and financial areas, like sales, purchases and accounting.
 
 * Orders
-* Invloices 
+* Invoices 
 * Customer
 * Sales Items
 
