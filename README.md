@@ -6,14 +6,14 @@ First of all, PRIMAVERA is a company specialized in the development of managemen
 
 ## Repository Organization
 
-This repository provides access to two demo solutions, one is a REST API Console Application and the secound is a Angular Client Application. Both contains examples of API calls to ROSE.
+This repository provides access to two demo solutions, one is a C# NET CORE REST API Console Application and the secound is a Angular Client Application. Both contains examples of API calls to ROSE.
 
 ## Before Start
 Before start develop you integration, frist some base principles.
 
 ### Register your Application
 
-Before you start develop your code you must first register as a ROSE developer and use our [App Dashboard](https://apps.primaverabss.com/rose/apps) to provide information about your app and configure your app settings.
+Before you start develop your code you must first register as a ROSE developer and use our App Dashboard to provide information about your app and configure your app settings.
 
 * Go to [App Dashboard](https://apps.primaverabss.com/rose/apps).
 * Login with your PRIMAVERA IDENTITY account.
