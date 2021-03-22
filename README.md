@@ -2,9 +2,7 @@
 
 In this repository you will find some code samples to accelerate your integration with ROSE and ROSE AS (Accounting Services).
 
-## What is ROSE?
-
-First of all, PRIMAVERA is a company specialized in the development of management solutions (*ERP - Enterprise Resource Planning*) for small, medium and large companies. ROSE is a cloud solution for medium and large companies and ROSE AS is a cloud solution to accounting offices. Both solutions provides a set of extensibility technologies that enable third-party applications to extend or add new features to provide richer solutions to the end customer.
+First of all, PRIMAVERA is a company specialized in the development of management solutions (*ERP - Enterprise Resource Planning*) for small, medium and large companies. ROSE is a cloud solution for medium and large companies and ROSE AS is a cloud solution to accounting offices. Both solutions provide a set of extensibility technologies that enable third-party applications to extend or add new features to provide richer solutions to the end customer.
 
 ## Repository Organization
 
@@ -12,6 +10,20 @@ This repository provides access to two demo solutions, one is a REST API Console
 
 ## Before Start
 Before start develop you integration, frist some base principles.
+
+### Register your Application
+
+Before you start develop your code you must first register as a ROSE developer and use our [App Dashboard](https://apps.primaverabss.com/rose/apps) to provide information about your app and configure your app settings.
+
+* Go to [App Dashboard](https://apps.primaverabss.com/rose/apps).
+* Login with your PRIMAVERA IDENTITY account.
+* Select the developer menu, and then click on **Creat App**.
+* Provide a application KEY. This is your application ID.
+* Select your authorization flow.
+* Fill other needed information.
+* Authorize your app access to a valid subscription.
+
+> For development propose you don't need publish your App. This is only required when you app goes live.
 
 ### Authorizing Client Applications
 
@@ -24,9 +36,44 @@ At the current version, ROSE supported the followings OAuth 2.0 flows:
 * Hybrid flow
 * Client credentials
 
-### Register your Application
+Where a sample to get the authorization token using the client credentials grant type.
 
-todo.............
+```csharp
+public async Task<string> GetAccessTokenAsync()
+{
+    using (HttpClient client = new HttpClient())
+    {
+        try
+        {
+            client.BaseAddress = new Uri(appBaseUrl);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // Build the request data (grant type client credentials)
+
+            List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>();
+            postData.Add(new KeyValuePair<string, string>("grant_type", "client_credentials"));
+            postData.Add(new KeyValuePair<string, string>("scope", "rose-api"));
+            postData.Add(new KeyValuePair<string, string>("client_id", clientId));
+            postData.Add(new KeyValuePair<string, string>("client_secret", clientSecret));
+
+            FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+
+            // Post the request and get the response
+
+            HttpResponseMessage response = await client.PostAsync(IdentitUriKey, content);
+            string jsonString = await response.Content.ReadAsStringAsync();
+            object responseData = JsonConvert.DeserializeObject(jsonString);
+
+             return ((dynamic)responseData).access_token;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(string.Format("Error getting token. {0}", ex.Message));
+        }
+    }
+}
+```
 
 ## Contributing and Feedback
 Everyone is free to contribute to the repository.
