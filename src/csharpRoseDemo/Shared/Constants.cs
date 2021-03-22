@@ -2,13 +2,13 @@
 {
     internal class RoseConstants
     {
-        internal const string clientId = "ROSE-SAMPLE-APP";
+        internal const string clientId = "<-- Insert where your client id -->";
 
-        internal const string clientSecret = "912c4fdf-9b2a-4bb5-b939-141b23863afc";
+        internal const string clientSecret = "<-- Insert where your client client secret -->";
 
-        internal const string AccountKey = "HXDID1P";
+        internal const string AccountKey = "<-- Insert where the accountKey -->";
 
-        internal const string SubscriptionKey = "HXDID7M-HXDIDGJ";
+        internal const string SubscriptionKey = "<-- Insert where the subscription key -->";
 
         internal const string ApplicationScopes = "rose-api";
 
