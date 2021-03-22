@@ -29,7 +29,7 @@ Before you start develop your code you must first register as a ROSE developer a
 
 ROSE supports the OAuth 2.0 mechanism of authorization for applications, this means that the client application does not operate with the ROSE credentials, instead the client application must obtains an access token from PRIMAVERA IDENTITY SERVER and uses this token when to requests data. Soo the the frist thing before any request to the application is retrive the authorization token.
 
-At the current version, ROSE supported the followings OAuth 2.0 flows:
+At the current version, ROSE support the followings OAuth 2.0 flows:
 
 * Authorization code
 * Implicit flow
