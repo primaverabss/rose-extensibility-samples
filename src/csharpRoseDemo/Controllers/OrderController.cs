@@ -1,15 +1,13 @@
 ﻿
-using RoseSample.Entities;
-using Newtonsoft.Json;
-using RoseSample.Currency;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using RoseSample;
-using RoseSample.Identity;
+using Newtonsoft.Json;
+using RoseSample.Currency;
+using RoseSample.Entities;
 using RoseSample.Helper;
+using RoseSample.Identity;
 
 namespace RoseSample.Controllers
 {
@@ -18,6 +16,8 @@ namespace RoseSample.Controllers
     /// </summary>
     class OrderController
     {
+        #region POST
+
         public static async Task GetOrdersAsync(AuthData authData)
         {
             Console.WriteLine("Getting Orders ...");
@@ -132,5 +132,7 @@ namespace RoseSample.Controllers
                 Utils.BackToMenu();
             }
         }
+
+        #endregion
     }
 }

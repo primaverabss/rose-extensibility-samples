@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 using RoseSample.Identity;
 using RoseSample.Helper;
 
-namespace RoseSample.Controllers
+namespace RoseSample.Controllers 
 {
     /// <summary>
     /// Controller to handle with the sales itens actions.
     /// </summary>
     class SalesItemsController
     {
+        #region POST
+
         public static async Task GetSalesItemsAsync(AuthData authData)
         {
             Console.WriteLine("Getting Sales Items ...");
@@ -73,5 +75,7 @@ namespace RoseSample.Controllers
                 throw new Exception("Error creating the sales items.");
             }
         }
+
+        #endregion
     }
 }

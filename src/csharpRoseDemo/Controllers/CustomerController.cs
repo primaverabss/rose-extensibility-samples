@@ -13,8 +13,10 @@ namespace RoseSample.Controllers
     /// <summary>
     /// Controller to handle with the customer actions.
     /// </summary>
-    class CreateCustomerController
+    class CustomerController
     {
+        #region POST
+
         public static async Task CreateCustomerAsync(AuthData authData)
         {
             Console.WriteLine("Create ICustomer ...");
@@ -71,5 +73,6 @@ namespace RoseSample.Controllers
             }
         }
 
+        #endregion
     }
 }

@@ -23,15 +23,15 @@ namespace RoseSample.Currency
         {
         }
 
-        public Amount(double value)
-        {
-            this.Value = value;
-        }
+        ////public Amount(double value)
+        ////{
+        ////    this.Value = value;
+        ////}
 
-        public Amount(double value, string currency)
-        {
-            this.Value = value;
-            this.Currency = currency;
-        }
+        ////public Amount(double value, string currency)
+        ////{
+        ////    this.Value = value;
+        ////    this.Currency = currency;
+        ////}
     }
 }

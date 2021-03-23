@@ -35,6 +35,8 @@ namespace RoseSample
                 Console.WriteLine("4. Create Order");
                 Console.WriteLine("5. Create Customer");
                 Console.WriteLine("6. Get Sales Items");
+                Console.WriteLine("7. Get Journal Entries");
+                Console.WriteLine("8. Create Journal Entries");
                 Console.WriteLine("0. Exit");
 
                 Console.WriteLine("");
@@ -77,7 +79,7 @@ namespace RoseSample
             switch (option)
             {
                 case 1:
-                    await GetInvoiceController.GetInvoicesAsync(authData);
+                    await InvoiceController.GetInvoicesAsync(authData);
                     break;
 
                 case 2:
@@ -93,11 +95,19 @@ namespace RoseSample
                     break;
 
                 case 5:
-                    await CreateCustomerController.CreateCustomerAsync(authData);
+                    await CustomerController.CreateCustomerAsync(authData);
                     break;
 
                 case 6:
                     await SalesItemsController.GetSalesItemsAsync(authData);
+                    break;
+
+                case 7:
+                    await JounalEntryController.GetJournalEntryAsync(authData);
+                    break;
+
+                case 8:
+                    await JounalEntryController.CreateJournalEntryAsync(authData);
                     break;
 
                 default:

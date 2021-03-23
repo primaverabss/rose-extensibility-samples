@@ -6,6 +6,7 @@ This demo application includes several features that allow you to understand how
 * Invoices 
 * Customer
 * Sales Items
+* Journal Entry
 
 ## How to Run This Demo?
 
