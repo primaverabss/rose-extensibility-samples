@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './services/login.services';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'rd-root',
@@ -12,9 +13,12 @@ export class AppComponent implements OnInit {
   private loggedIn: boolean = false;
 
   constructor(
-    private loginService: LoginService
-    ) {
-  }
+    private loginService: LoginService,
+    translate: TranslateService)
+    {
+      // this language will be used as a fallback when a translation isn't found in the current language
+      translate.setDefaultLang('pt');
+    }
 
   ngOnInit(){
 
