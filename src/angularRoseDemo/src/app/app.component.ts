@@ -8,7 +8,7 @@ import { LoginService } from './services/login.services';
 })
 export class AppComponent implements OnInit {
 
-  title:string = 'angularRoseDemo';
+  title:string = 'Angular Rose Demo Application';
   private loggedIn: boolean = false;
 
   constructor(
@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
 
     this.initLoginService();
+
   }
 
   private initLoginService() {
