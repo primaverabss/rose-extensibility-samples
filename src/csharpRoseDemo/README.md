@@ -15,7 +15,8 @@ To run this application you need:
 * Visual Studio 2017 our 2019.
 * Reference to .NET CORE 2.0 our higher.
 * Restore the packages.
-* Provide your application *Client Id* and *Secret*. Register your app on the App Dashboard.
+* Register your app on the App Dashboard with the client credentials flow.
+* Provide your application *Client Id* and *Secret*. 
 * Provide your *AccountKey* and *SubscriptionKey*. You can get this from ROSE application URL.
 
 Change the *constants.cs* contend with you information.
