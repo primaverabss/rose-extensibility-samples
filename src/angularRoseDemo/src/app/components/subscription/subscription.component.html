@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Subscrição de Trabalho</h5>
+          <form class="form-signin">
+
+            <div class="form-label-group">
+              <input [(ngModel)]="account" name="account" class="form-control" placeholder="Account" required autofocus/>
+              <label for="account">{{ 'RES_Account' | translate }}</label>
+            </div>
+
+            <div class="form-label-group">
+              <input [(ngModel)]='subscription' name="subscription" class="form-control" placeholder="Subscription" required/>
+              <label for="inputPassword">{{ 'RES_Subscription' | translate }}</label>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="goToApplication()">{{ 'RES_Login' | translate }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

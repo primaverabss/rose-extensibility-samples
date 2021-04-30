@@ -1,5 +1,8 @@
 {
   "RES_Login": "Entrar",
+  "RES_Account": "Account",
+  "RES_Subscription": "Subscription",
+  "RES_SubscriptionTitle": "Subscrição de Trabalho",
   "RES_RetryLogin": "Voltar a Entrar",
   "RES_Logout": "Sair",
   "RES_Aboutus": "Sobre nós"
