@@ -1,14 +1,20 @@
-# AngularRoseDemo
+# ROSE ANGULAR TEMPLATE APPLICATION
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and has designed to work as template for your projects.
 
-## Development server
+This project provides a set of technical features like:
+* Oauth2 authentication service using `@angular-oauth2-oidc`.
+* Translate service using `@ngx-translate`.
+* Environment variables to support development and production environments.
+* Error handing service.
+* Subscription selection component.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run this application
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Register your app on the [App Dashboard](https://apps.primaverabss.com/developer/dashboard) with the implicit our hybrid flow.
+* Provide the clientID that you have defined in the previous steep. Do this in the `env.js` file.
+* Run `npm install` to install the packages.
+* Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Build
 
@@ -22,6 +28,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## WebAPI Documentation
+Information about the webapi [here](https://apidoc.rose.primaverabss.com/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contributing and Feedback
+Everyone is free to contribute to the repository.
+
+Any bugs detected in the code samples can be reported in the Issues section of this repository.
+
+## License
+Unless otherwise specified, the code samples are released under the MIT license.
