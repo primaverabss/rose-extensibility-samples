@@ -6,7 +6,9 @@ First of all, PRIMAVERA is a company specialized in the development of managemen
 
 ## Repository Organization
 
-This repository provides access to two demo solutions, one is a C# NET CORE REST API Console Application and the secound is a Angular Client Application. Both contains examples of API calls to ROSE.
+This repository provides access:
+* C# NET CORE REST API Console Application 
+* Angular Template to quickly start new projects.
 
 ## Before Start
 Before start develop you integration, frist some base principles.
