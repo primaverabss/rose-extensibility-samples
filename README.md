@@ -7,8 +7,11 @@ First of all, PRIMAVERA is a company specialized in the development of managemen
 ## Repository Organization
 
 This repository provides access:
-* C# NET CORE REST API Console Application 
-* Angular Template to quickly start new projects.
+
+| Projet | Description |
+|----------|----------|
+| [csharpRoseDemo](csharpRoseDemo) | C# NET CORE REST API Console Application |
+| [angularRoseTemplate](angularRoseTemplate) | Angular Template to quickly start new projects |
 
 ## Before Start
 Before start develop you integration, frist some base principles.
