@@ -10,8 +10,8 @@ This repository provides access:
 
 | Projet | Description |
 |----------|----------|
-| [csharpRoseDemo](csharpRoseDemo) | C# NET CORE REST API Console Application |
-| [angularRoseTemplate](angularRoseTemplate) | Angular Template to quickly start new projects |
+| [csharpRoseDemo](src/csharpRoseDemo) | C# NET CORE REST API Console Application |
+| [angularRoseTemplate](src/angularRoseTemplate) | Angular Template to quickly start new projects |
 
 ## Before Start
 Before start develop you integration, frist some base principles.
