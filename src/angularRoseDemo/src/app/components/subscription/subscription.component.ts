@@ -41,6 +41,7 @@ export class SubscriptionComponent implements OnInit {
   goToApplication(): void
   {
       this.writeAccountDataToStorage();
+      this.router.navigate(['/home']);
   }
 
   private writeAccountDataToStorage()
@@ -48,17 +49,20 @@ export class SubscriptionComponent implements OnInit {
     let accountCode:string = 'account_code';
     let subscriptionCode:string = 'subscription_code';
 
-    sessionStorage.removeItem(accountCode);
-    sessionStorage.setItem(accountCode, this.account);
+    localStorage.removeItem(accountCode);
+    localStorage.setItem(accountCode, this.account);
 
-    sessionStorage.removeItem(subscriptionCode);
-    sessionStorage.setItem(subscriptionCode, this.subscription);
+    localStorage.removeItem(subscriptionCode);
+    localStorage.setItem(subscriptionCode, this.subscription);
   }
 
   private accountDataExistOnStorage():boolean
   {
-    var accountValue = sessionStorage.getItem('account_code');
-    var subscriptionValue = sessionStorage.getItem('subscription_code');
+    var accountValue = localStorage.getItem('account_code');
+    var subscriptionValue = localStorage.getItem('subscription_code');
+
+    this.account = accountValue!;
+    this.subscription = subscriptionValue!;
 
     if (accountValue != null && subscriptionValue != null )
     {

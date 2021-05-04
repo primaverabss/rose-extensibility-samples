@@ -122,11 +122,11 @@ export class CoreService {
   }
 
   public getTenantKey(): string {
-      return ''// sessionStorage.getItem('tenantKey');
+      return localStorage.getItem('account_code')!;
   }
 
   public getOrganizationKey(): string {
-      return ''// sessionStorage.getItem('organizationKey');
+      return localStorage.getItem('subscription_code')!;
   }
 
   private handleError(error: HttpErrorResponse) {

@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
+import { catchError } from 'rxjs/operators';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BlockUIModule } from 'ng-block-ui';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './../app/components/home/home.component'
+import { HomeComponent } from './../app/components/home/home.component';
 import { SubscriptionComponent } from './../app/components/subscription/subscription.component';
+import { PublicComponent } from './../app/components/public/public.component';
+import { SecureComponent } from './../app/components/secure/secure.component';
 
 import { EnvServiceProvider } from './env.service.provider';
 
@@ -28,6 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    PublicComponent,
+    SecureComponent,
     SubscriptionComponent,
     HomeComponent
   ],
