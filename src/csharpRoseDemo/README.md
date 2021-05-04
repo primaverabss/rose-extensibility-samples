@@ -37,6 +37,3 @@ namespace RoseSample.Constants
     }
 }
 ```
-
-## WebAPI Documentation
-More information about the webapi [here](https://apidoc.rose.primaverabss.com/)

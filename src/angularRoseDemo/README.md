@@ -29,9 +29,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## WebAPI Documentation
-Information about the webapi [here](https://apidoc.rose.primaverabss.com/)
-
 ## Contributing and Feedback
 Everyone is free to contribute to the repository.
 
