@@ -28,9 +28,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## WebAPI Documentation
-Information about the webapi [here](https://primaverabss.github.io/rose-product-erp/)
-
 ## Contributing and Feedback
 Everyone is free to contribute to the repository.
 
