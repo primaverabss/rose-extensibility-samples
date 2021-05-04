@@ -6,6 +6,7 @@ This project provides a set of technical features like:
 * Oauth2 authentication service using `@angular-oauth2-oidc`.
 * Translate service using `@ngx-translate`.
 * Environment variables to support development and production environments.
+* API service manager to access the produt API.
 * Error handing service.
 * Subscription selection component.
 
