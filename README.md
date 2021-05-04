@@ -74,6 +74,8 @@ public async Task<string> GetAccessTokenAsync()
     }
 }
 ```
+## WebAPI Documentation
+Information about the webapi [here](https://primaverabss.github.io/rose-product-erp/)
 
 ## Contributing and Feedback
 Everyone is free to contribute to the repository.
