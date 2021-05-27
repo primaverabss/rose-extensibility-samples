@@ -3,8 +3,8 @@
   window.__env.issuer = 'https://identity.primaverabss.com',
   window.__env.loginurl = 'https://identity.primaverabss.com/connect/authorize',
   window.__env.logouturl = 'https://identity.primaverabss.com/connect/endsession',
-  window.__env.clientId = 'ANGULARAPP',
+  window.__env.clientId = 'APP-BI',
   window.__env.scope = 'rose-api',
   window.__env.redirectUri = 'http://localhost:4200/index.html';
-  window.__env.appUri = 'http://app.rose.primaverabss.com'
+  window.__env.appUri = 'https://app.rose.primaverabss.com'
 }(this));

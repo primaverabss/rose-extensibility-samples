@@ -1,6 +1,7 @@
 import { catchError } from 'rxjs/operators';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { BlockUIModule } from 'ng-block-ui';
 
@@ -10,7 +11,9 @@ import { HomeComponent } from './../app/components/home/home.component';
 import { SubscriptionComponent } from './../app/components/subscription/subscription.component';
 import { PublicComponent } from './../app/components/public/public.component';
 import { SecureComponent } from './../app/components/secure/secure.component';
-
+import { CustomerComponent } from './../app/components/customer/customer.component';
+import { CustomerDetailComponent } from './../app/components/customerdetail/customerdetail.component';
+import { CustomerPendingDocsComponent } from './../app/components/customerpendingdocs/customerpendingdocs.component';
 import { EnvServiceProvider } from './env.service.provider';
 
 import { OAuthModule } from 'angular-oauth2-oidc';
@@ -19,10 +22,7 @@ import { CoreService } from './services/core.service';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-
-import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -34,6 +34,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     PublicComponent,
     SecureComponent,
     SubscriptionComponent,
+    CustomerComponent,
+    CustomerDetailComponent,
+    CustomerPendingDocsComponent,
     HomeComponent
   ],
   imports: [

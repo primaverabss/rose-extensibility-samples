@@ -1,0 +1,32 @@
+<div class='card'>
+  <div class='card-header'>
+    Lista de Clientes
+  </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='customers.length'>
+        <thead>
+          <tr>
+            <th>Entidade</th>
+            <th>Nome</th>
+            <th>País</th>
+            <th>Pendentes</th>
+            <th>Contacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let customer of customers'>
+            <td> <a [routerLink]="['/customersdetail', customer.partyKey]" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">{{customer.partyKey}}</a></td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.country }}</td>
+            <td>
+                <a [routerLink]="['/pendingdocs', customer.partyKey]" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"  class="fa fa-money"></a>
+            </td>
+            <td>
+                <i class="fa fa-phone-square"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

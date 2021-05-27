@@ -7,16 +7,21 @@
           <form class="form-signin">
 
             <div class="form-label-group">
-              <input [(ngModel)]="account" name="account" class="form-control" placeholder="Account" required autofocus/>
-              <label for="account">{{ 'RES_Account' | translate }}</label>
+              <input [(ngModel)]="account" name="account" class="form-control" required/>
+              <label for="account">{{'RES_Account' | translate }}</label>
             </div>
 
             <div class="form-label-group">
-              <input [(ngModel)]='subscription' name="subscription" class="form-control" placeholder="Subscription" required/>
-              <label for="inputPassword">{{ 'RES_Subscription' | translate }}</label>
+              <input [(ngModel)]='subscription' name="subscription" class="form-control" required/>
+              <label for="subscription">{{'RES_Subscription' | translate }}</label>
             </div>
 
-            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="goToApplication()">{{ 'RES_Login' | translate }}</button>
+            <div class="form-label-group">
+              <input [(ngModel)]='company' name="company" class="form-control" required/>
+              <label for="company">{{'RES_Company' | translate }}</label>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="goToApplication()">{{'RES_Login' | translate }}</button>
           </form>
         </div>
       </div>

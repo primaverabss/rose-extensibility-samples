@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpParams, HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError, tap } from 'rxjs/operators';
 import { productConfig } from '../product.config';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { TranslateService } from '@ngx-translate/core';
@@ -75,14 +75,15 @@ export class CoreService {
 
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
-      .append('Authorization', this.oAuthService.getAccessToken())
+      .append('Authorization', this.getAccessToken())
       .append('Cache-Control', 'no-cache')
       .append('Pragma', 'no-cache')
       .append('Expires', '-1');
 
     return this.http.get(productConfig.appUri + url, { headers: headers, params: parameters })
         .pipe(
-           retry(3), // retry a failed request up to 3 times
+           retry(2), // retry a failed request up to 2 times
+           tap (data => console.log ('Data', JSON.stringify(data))),
            catchError(this.handleError)
         )
   }
@@ -96,7 +97,7 @@ export class CoreService {
 
       const headers = new HttpHeaders()
         .set('Content-Type', 'application/json')
-        .append('Authorization', this.oAuthService.getAccessToken())
+        .append('Authorization', this.getAccessToken())
         .append('Cache-Control', 'no-cache')
         .append('Pragma', 'no-cache')
         .append('Expires', '-1');
@@ -113,7 +114,7 @@ export class CoreService {
 
       const headers = new HttpHeaders()
         .set('Content-Type', 'application/json')
-        .append('Authorization', this.oAuthService.getAccessToken())
+        .append('Authorization', this.getAccessToken())
         .append('Cache-Control', 'no-cache')
         .append('Pragma', 'no-cache')
         .append('Expires', '-1');
@@ -149,5 +150,19 @@ export class CoreService {
   public getJSON(jsonPath: string, parameters?: HttpParams) : Observable<any> {
       return this.http.get(jsonPath, { params: parameters })
       .pipe(catchError(this.handleError));
+  }
+
+  getAccessToken(): string {
+
+    var access_token = this.oAuthService.getAccessToken();
+
+    if (access_token != null) {
+        var accessToken = "Bearer " + access_token;
+        return accessToken;
+    }
+    else
+    {
+      return '';
+    }
   }
 }

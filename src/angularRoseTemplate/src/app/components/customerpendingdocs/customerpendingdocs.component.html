@@ -1,0 +1,28 @@
+<div class='card'>
+  <div class='card-header'>
+    Divida {{partyKey}}
+  </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='pendingdocs.length'>
+        <thead>
+          <tr>
+            <th>Documento</th>
+            <th>Data Vencimento</th>
+            <th>Valor</th>
+            <th>Pendente</th>
+            <th>Liquidado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let doc of pendingdocs'>
+            <td>{{ doc.sourceDoc }}</td>
+            <td>{{ doc.dueDate | date: 'd/M/yyyy'}}</td>
+            <td>{{ doc.amount | currency:'EUR' }}</td>
+            <td>{{ doc.open | currency:'EUR' }}</td>
+            <td>{{ doc.settled | currency:'EUR'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

@@ -34,17 +34,12 @@ export class AppComponent implements OnInit {
         this.loggedIn = true;
       }
       else {
-        this.loggedIn = true;
+        this.loggedIn = false;
       }
   }
 
   private login() {
     this.loginService.login();
     this.loggedIn = true;
-  }
-
-  private logout() {
-    this.loginService.logout();
-    this.loggedIn = false;
   }
 }

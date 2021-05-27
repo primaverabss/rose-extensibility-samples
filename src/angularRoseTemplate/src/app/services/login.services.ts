@@ -1,4 +1,4 @@
-import { productConfig } from './../product.config';
+import { productConfig } from '../product.config';
 import { Injectable } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +20,7 @@ export class LoginService {
         this.oAuthService.scope = productConfig.scope;
         this.oAuthService.issuer = productConfig.issuer;
         this.oAuthService.logoutUrl = productConfig.logouturl;
+        this.oAuthService.logoutUrl = productConfig.logouturl+ "?id_token_hint={{id_token}}&post_logout_redirect_uri=" + productConfig.redirectUri;
 
         this.oAuthService.setStorage(sessionStorage);
         this.oAuthService.oidc = true;
