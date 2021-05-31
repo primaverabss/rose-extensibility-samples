@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import {CustomerDetail} from '../../models/customer-detail'
-import { CoreService } from './../../services/core.service';
+import {CustomerDetail} from '../../../models/customer-detail'
+import { CoreService } from '../../../services/core.service';
 
 @Component({
   selector: 'rd-customer-detail',

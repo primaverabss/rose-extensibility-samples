@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { CoreService } from './../../services/core.service';
-import { CustomerPendingDocs } from './../../models/customer-pending-docs';
+import { CoreService } from '../../../services/core.service';
+import { CustomerPendingDocs } from '../../../models/customer-pending-docs';
 
 @Component({
   selector: 'rd-customerpendingdocs',

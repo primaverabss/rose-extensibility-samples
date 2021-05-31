@@ -12,8 +12,8 @@ import { SubscriptionComponent } from './../app/components/subscription/subscrip
 import { PublicComponent } from './../app/components/public/public.component';
 import { SecureComponent } from './../app/components/secure/secure.component';
 import { CustomerComponent } from './../app/components/customer/customer.component';
-import { CustomerDetailComponent } from './../app/components/customerdetail/customerdetail.component';
-import { CustomerPendingDocsComponent } from './../app/components/customerpendingdocs/customerpendingdocs.component';
+import { CustomerDetailComponent } from './components/customer/customerdetail/customerdetail.component';
+import { CustomerPendingDocsComponent } from './components/customer/customerpendingdocs/customerpendingdocs.component';
 import { EnvServiceProvider } from './env.service.provider';
 
 import { OAuthModule } from 'angular-oauth2-oidc';

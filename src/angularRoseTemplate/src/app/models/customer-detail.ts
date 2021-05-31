@@ -8,11 +8,4 @@ export class CustomerDetail{
   buildingNumber: string ='';
   postalZone: string ='';
   cityName: string ='';
-  customAttributes: CustomAttributes = new CustomAttributes();
-}
-
-export class CustomAttributes
-{
-  custom_GPSLAT: string ='';
-  custom_GPSLON: string ='';
 }

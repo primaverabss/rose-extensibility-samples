@@ -42,18 +42,6 @@
         <input [(ngModel)]="customerDetail.postalZone" [disabled]="!isNew" name="postalZone"  id="postalZone" type="text" class="form-control" />
       </div>
     </div>
-
-    <div class="row">
-      <div class="form-group col-md-2">
-        <label for="custom_GPSLAT">custom_GPSLAT</label>
-        <input [(ngModel)]="customerDetail.customAttributes.custom_GPSLAT" [disabled]="!isNew" name="custom_GPSLAT"  id="custom_GPSLAT" type="text" class="form-control" />
-      </div>
-      <div class="form-group col-md-2">
-        <label for="custom_GPSLON">custom_GPSLON</label>
-        <input [(ngModel)]="customerDetail.customAttributes.custom_GPSLON" [disabled]="!isNew" name="custom_GPSLON"  id="custom_GPSLON" type="text" class="form-control" />
-      </div>
-    </div>
-
     <div class="btnGroup">
       <button type="submit" *ngIf="isNew" [disabled]="detailCustomerForm.invalid" class="btn btn-primary btn-lg">Create</button>
 
